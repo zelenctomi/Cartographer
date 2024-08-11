@@ -1,0 +1,543 @@
+/* Outfit font */
+/* font-weights: 400, 500, 600, 700 */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
+
+html {
+    font-family: 'Outfit', system-ui, sans-serif;
+    background: var(--whitish);
+
+    /* Colors */
+    --bg: #252525;
+    --brown: #884400;
+    --whitish: #E5E5E5;
+    --orange: rgb(253, 157, 54);
+    --gold: #FFA800;
+    --green: #26a65b;
+    --blue: #038aff;
+    --wheat: #f1d693;
+    --mapBG: #eae3d2;
+}
+
+main {
+    padding: 2rem;
+    gap: 3rem;
+}
+
+.padding-1 { padding: 1rem; }
+.padding-2 { padding: 2rem; }
+.padding-3 { padding: 3rem; }
+.padding-4 { padding: 4rem; }
+.padding-5 { padding: 5rem; }
+
+.gap-1 { gap: 1rem; }
+.gap-2 { gap: 2rem; }
+.gap-3 { gap: 3rem; }
+.gap-4 { gap: 4rem; }
+.gap-5 { gap: 5rem; }
+.gap-6 { gap: 6rem; }
+.gap-7 { gap: 7rem; }
+.gap-8 { gap: 8rem; }
+.gap-9 { gap: 9rem; }
+.gap-10 { gap: 10rem; }
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.grid {
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    grid-template-columns: 1fr 1fr;
+    width: 80vw;
+    margin: auto;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.row {
+    flex-direction: row;
+    align-items: start;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.self-start {
+    align-self: flex-start;
+    justify-self: flex-start;
+}
+
+.space-between {
+    justify-content: space-between;
+} 
+
+h1 {
+    width: fit-content;
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+h2 {
+    width: fit-content;
+    font-size: 1.7rem;
+    margin: 0;
+}
+
+h3 {
+    width: fit-content;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* Start Screen */
+
+#title {
+    font-size: 5rem;
+    margin: 4rem;
+}
+
+#startButton {
+    width: 18rem;
+    font-size: 1.7rem;
+    font-family: 'Outfit';
+    color: var(--whitish);
+    text-transform: uppercase;
+    font-weight: 600;
+    background: var(--orange);
+    border: 2px solid var(--orange);
+    border-radius: 12px;
+    cursor: pointer;
+    padding: 1rem 1.2rem;
+    box-shadow: 0 0 10px #eb7c1a60;
+    transition: transform .2s;
+}
+
+#startButton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 3px 10px #eb7c1a60;
+}
+
+/* Game Assets */
+
+#spring { background: var(--green); }
+#summer { background: var(--orange); }
+#fall { background-color: var(--brown); }
+#winter { background-color: var(--blue); }
+
+.season {
+    width: 6rem;
+    aspect-ratio: 6/5;
+    border-radius: 12px;
+    box-shadow: 0 0 10px var(--whitish);
+}
+
+.season > * {
+    margin-top: 0;
+    color: var(--whitish);
+}
+
+#rightSide { align-self: end; }
+
+#map {
+    position: relative;
+    background: var(--mapBG);
+    border-radius: 18px;
+    padding: 1rem;
+}
+
+.element, .tile {
+    position: relative;
+    width: 70px;
+    aspect-ratio: 1/1;
+    border-radius: 12px;
+    background: var(--wheat);
+    border: 3px solid var(--mapBG);
+}
+
+.element:hover { cursor: pointer; }
+
+/* .temp-type-1, .temp-type-2, .temp-type-3, .temp-type-4, .temp-type-5 { background: var(--wheat); } */
+
+.type-1 { background: url("assets/elements/mountain.svg"); }
+.type-2 { background: url("assets/elements/forest.svg"); }
+.type-3 { background: url("assets/elements/village.svg"); }
+.type-4 { background: url("assets/elements/crops.svg"); }
+.type-5 { background: url("assets/elements/water.svg"); }
+
+.type-1, .type-2, .type-3, .type-4, .type-5 { background-size: contain; }
+
+.redHighlight { 
+    outline: 4px solid rgb(255, 0, 0);
+    outline-offset: -6px;
+}
+.greenHighlight {
+    outline: 4px solid rgb(0, 255, 0);
+    outline-offset: -6px;
+}
+
+.mission {
+    position: relative;
+    background: var(--bg);
+    border-radius: 15px;
+    width: 30rem;
+}
+
+.mission > * {
+    color: var(--whitish);
+}
+
+.mission > img {
+    width: 8rem;
+    aspect-ratio: 1/1;
+}
+
+.activeMission0 {
+    outline: 5px solid var(--green);
+    box-shadow: 0 0 5px 7px #19ff3060;
+    transition: outline .5s ease-out, box-shadow .5s ease-out;
+}
+
+.activeMission1 {
+    outline: 5px solid var(--orange);
+    box-shadow: 0 0 5px 7px #ff811960;
+    transition: outline .5s ease-out, box-shadow .5s ease-out;
+}
+
+.activeMission2 {
+    outline: 5px solid var(--brown);
+    box-shadow: 0 0 5px 7px #b8540360;
+    transition: outline .5s ease-out, box-shadow .5s ease-out;
+}
+
+.activeMission3 {
+    outline: 5px solid var(--blue);
+    box-shadow: 0 0 5px 7px #0f5ce260;
+    transition: outline .5s ease-out, box-shadow .5s ease-out;
+}
+
+.letter-A::after, .letter-B::after, .letter-C::after, .letter-D::after {
+    font-family: 'Outfit';
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--whitish);
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+.letter-A::after { content: 'A'; }
+.letter-B::after { content: 'B'; }
+.letter-C::after { content: 'C'; }
+.letter-D::after { content: 'D'; }
+
+.points-0, .points-1, .points-2, .points-3 {
+    font-family: 'Outfit';
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--gold);
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+/* Current Tiles */
+
+#tilesSection {
+    margin-top: 1rem;
+    align-self: start;
+}
+
+#currentTiles {
+    background: var(--mapBG);
+    border-radius: 15px;
+}
+
+#tilesNav {
+    gap: 4rem;
+}
+
+#tilesSection button, #popup button { 
+    width: fit-content;
+    font-size: 1rem;
+    font-family: 'Outfit';
+    color: var(--whitish);
+    text-transform: uppercase;
+    font-weight: 500;
+    background: var(--bg);
+    border: 2px solid var(--bg);
+    border-radius: 12px;
+    cursor: pointer;
+    padding: .7rem .9rem;
+    box-shadow: 0 0 10px #352e2860;
+    transition: transform .2s;
+}
+
+#rotate:hover, #mirror:hover, #newGame:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 3px 10px #332d2860;
+}
+
+.invisible { visibility: hidden; }
+
+#watch { width: 2rem; }
+
+/* Surrounded Mountain Mission */
+
+.surroundedMountain::after {
+    content: "1p";
+    position: absolute;
+    width: 50%;
+    aspect-ratio: 1/1;
+    top: 15%;
+    left: 25%;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--gold);
+    transform: translateY(-70%);
+    animation: up 1s ease-in;
+}
+
+/* Game Over + Animation */
+
+#popup {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(200, 192, 192, 0.4);
+    box-shadow: 0 0 5px 2px rgba(200, 192, 192, 0.4);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border-radius: 18px; /* Same as map */
+    animation: popup .3s linear;
+}
+
+#popup button, #popup h1 { animation: fadeIn .3s ease-out; }
+
+@keyframes popup {
+    0% { backdrop-filter: blur(0px); }
+    50% { backdrop-filter: blur(1px); }
+    100% { backdrop-filter: blur(2px); }
+}
+
+@keyframes fadeIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-2px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(2px);
+    }
+    0% { transform: scale(.5); }
+    100% { transform: scale(1); }
+}
+
+.shake { animation: shake .3s ease-in-out; }
+
+@keyframes up {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-35%); }
+    100% { transform: translateY(-70%); }
+}
+
+/* Responsivity */
+
+@media only screen and (max-width: 1800px) {
+
+    main { 
+        padding: 1rem; 
+        gap: 1rem;
+    };
+
+    h1 { font-size: 1.7rem; }
+    h2 { font-size: 1.2rem; }
+    h3 { font-size: 1.1rem; }
+    p { font-size: 1rem; }
+
+    .season { width: 4.5rem; }
+
+    .element, .tile { width: 55px; }
+
+    .mission {
+        width: 20rem;
+        height: 6rem;
+    }
+
+    .mission > img {
+        width: 6rem;
+    }
+
+    .letter-A::after, .letter-B::after, .letter-C::after, .letter-D::after {
+        font-size: 1.2rem;
+        bottom: .5rem;
+        right: 1rem;
+    }
+    
+    .points-0, .points-1, .points-2, .points-3 {
+        top: .5rem;
+        right: 1rem;
+    }
+
+    #tilesSection button, #popup button { 
+        font-size: .8rem;
+        padding: .5rem .7rem;
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+
+    main { padding: 0; }
+
+    h3 { font-size: 1rem; }
+    p { font-size: .9rem; }
+
+    .padding-1 { padding: .5rem; }
+    .padding-2 { padding: 1rem; }
+    .padding-3 { padding: 1.5rem; }
+    .padding-4 { padding: 2rem; }
+    .padding-5 { padding: 2.5rem; }
+
+    .gap-1 { gap: .5rem; }
+    .gap-2 { gap: 1rem; }
+    .gap-3 { gap: 1.5rem; }
+    .gap-4 { gap: 2rem; }
+    .gap-5 { gap: 2.5rem; }
+    .gap-6 { gap: 3rem; }
+    .gap-7 { gap: 3.5rem; }
+    .gap-8 { gap: 4rem; }
+
+    #map { padding: .5rem; }
+
+    #tilesSection { margin-top: 0; }
+
+    #tilesNav { gap: 1rem; }
+
+    .element, .tile { 
+        width: 40px;
+        border-width: 2px;
+    }
+
+    .mission {
+        width: 19rem;
+        height: 6rem;
+    }
+
+    .mission > img {
+        width: 5.5rem;
+    }
+
+    .letter-A::after, .letter-B::after, .letter-C::after, .letter-D::after {
+        font-size: 1.2rem;
+        bottom: .5rem;
+        right: 1rem;
+    }
+    
+    .points-0, .points-1, .points-2, .points-3 {
+        top: .5rem;
+        right: 1rem;
+    }
+
+    .activeMission0, .activeMission1, .activeMission2, .activeMission3 { 
+        outline-width: 2px;
+    }
+
+    #tilesSection button, #popup button { 
+        font-size: .8rem;
+        padding: .5rem .7rem;
+    }
+
+    #watch { width: 1.5rem; }
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .season { width: 4.5rem; }
+
+    /* #tilesSection { align-self: center; }
+
+    #missions { 
+        flex-direction: column;
+        justify-self: start;
+     } */
+
+    .element, .tile { 
+        width: 30px;
+        /* border-width: 1px; */
+    }
+
+    h3 { font-size: .9rem; }
+    p { font-size: .8rem; }
+
+    .mission {
+        width: 17rem;
+        height: 5rem;
+    }
+
+    .mission > img {
+        margin-block: auto;
+        height: 4rem;
+    }
+
+    .letter-A::after, .letter-B::after, .letter-C::after, .letter-D::after {
+        font-size: .8rem;
+        bottom: .5rem;
+        right: .7rem;
+    }
+    
+    .points-0, .points-1, .points-2, .points-3 {
+        font-size: .7rem;
+        top: .5rem;
+        right: .7rem;
+    }
+
+    #tilesSection button, #popup button { 
+        font-size: .6rem;
+        padding: .3rem .5rem;
+    }
+
+    #watch { width: 1rem; }
+}
+
+@media only screen and (max-width: 1000px) {
+
+    main { 
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    #leftSide, #rightSide {
+        align-self: center;
+    }
+
+    #tilesSection { align-self: center; }
+
+    #missions { 
+        flex-direction: column;
+        justify-self: start;
+        }
+}

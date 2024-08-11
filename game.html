@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="#"> <!-- favicon -->
+    <title>A térképész - Játék</title>
+</head>
+<body>
+
+    <!-- <div class="popup"></div> -->
+    
+    <main class="flex">
+
+        <div id="leftSide" class="self-start">
+
+            <h1 class="padding-2">Burgonya Térkép</h1>
+
+            <div id="map" class="flex wrap"></div>
+
+        </div>
+
+        <div id="rightSide" class="flex column">
+
+            <div id="pointSection" class="flex column padding-2 gap-1">
+
+                <div id="seasons" class="flex row gap-1">
+
+                    <div id="spring" class="season flex column padding-1">
+
+                        <h2>Tavasz</h2>
+                        <p><span id="springPoints">0</span> pont</p>
+                        
+                    </div>
+
+                    <div id="summer" class="season flex column padding-1">
+
+                        <h2>Nyár</h2>
+                        <p><span id="summerPoints">0</span> pont</p>
+
+                    </div>
+
+                    <div id="fall" class="season flex column padding-1">
+
+                        <h2>Ősz</h2>
+                        <p><span id="fallPoints">0</span> pont</p>
+
+                    </div>
+
+                    <div id="winter" class="season flex column padding-1">
+
+                        <h2>Tél</h2>
+                        <p><span id="winterPoints">0</span> pont</p>
+
+                    </div>
+                    
+                </div>
+
+                <div class="flex">
+
+                    <h3>Összesen <span id="totalPoints">0</span> pont</h3>
+
+                </div>
+
+            </div>
+
+            <div id="missionSection" class="flex column gap-1">
+
+                <h3 class="self-start">Jelenlegi Évszak: <span id="currentSeason"></span></h3>
+
+                <div id="missions" class="flex wrap gap-1"></div>
+
+                <h3 class="self-start">Évszakból hátralévő idő: <span id="remainingSeasonTime"></span></h3>
+
+            </div> 
+
+            <div id="tilesSection" class="flex">
+
+                <div id="currentTiles" class="flex wrap padding-1"></div>
+
+                <div id="tilesNav" class="flex column padding-1">
+
+                    <div class="flex gap-1 self-start">
+
+                        <img src="assets/watch.svg" alt="watch" id="watch">
+
+                        <h3 id="cost"></h3>
+
+                    </div>
+
+                    <div class="flex column gap-1">
+
+                        <button id="rotate" type="button" name="rotate">Forgatás - r</button>
+
+                        <button id="mirror" type="button" name="mirror">Tükrözés - t</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+            
+        </div>
+
+    </main>
+
+    <script src="game.js" type="module" ></script>
+
+</body>
+</html>
